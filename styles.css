@@ -246,3 +246,25 @@ figure.origin{margin:0 calc(-1 * var(--pad))}
   .pair-ph.tall.strive{width:440px}
   figure.origin{width:560px}
 }
+/* r3: compact hero panel 860-1199 (CTO: panel <=25% of hero, buttons on one row) */
+@media (min-width:860px) and (max-width:1199px){
+  .hero-photo .ph img{height:min(88svh,70vw);object-position:90% 38%}
+  .hero-panel{bottom:24px}
+  .hero-text{width:clamp(400px,36vw,430px);padding:18px 20px 12px}
+  h1{font-size:clamp(26px,2.7vw,31px);line-height:1.04}
+  .lede{font-size:15px;line-height:1.45;margin-top:8px}
+  .btns{flex-wrap:nowrap;gap:8px;margin-top:14px}
+  .btn{min-height:44px;padding:10px 14px;font-size:15px}
+  .rating{margin-top:0;min-height:44px;font-size:13px}
+}
+/* r3: on 2x screens wider than 1476px the 2460px master would be upscaled past 1.2x; cap the hero box so scale stays <=1.2 */
+@media (min-width:1477px) and (min-resolution:1.5dppx){
+  .hero-photo .ph img{width:1476px;height:min(88svh,922px);margin:0 auto;display:block;border-radius:6px}
+  .hero-text{width:580px}
+  h1{font-size:54px}
+}
+/* r3: 600-859, keep the cardio photo with the gym section and clearly apart from the spa heading */
+@media (min-width:600px) and (max-width:859px){
+  .feel{padding-bottom:56px}
+  .spa{border-top:1px solid var(--hair);padding-top:56px}
+}
