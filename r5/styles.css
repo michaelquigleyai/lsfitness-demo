@@ -139,9 +139,7 @@ address{font-style:normal}
   .demo{margin-left:auto}
 }
 @media (min-width:1200px){
-  .hero{height:min(44.3vw,654px);max-height:calc(100svh - var(--head) + 120px);min-height:532px}
+  .hero{height:min(88svh,44.3vw);min-height:532px}
   .hero-ph img{object-position:50% 50%}
 }
-/* above 1476px the 2460px heroband would upscale past 1.2 at DPR2: cap the photo at 1476px, centred, edges feathered into the ink */
-@media (min-width:1477px){.hero-ph{left:50%;right:auto;width:1476px;transform:translateX(-50%);-webkit-mask-image:linear-gradient(to right,transparent 0,#000 10%,#000 90%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 10%,#000 90%,transparent 100%)}}
 @media (max-width:599px) and (max-height:780px){h1{font-size:30px}.hero::after{background:linear-gradient(to top,rgba(10,11,18,.96) 0%,rgba(10,11,18,.9) 50%,rgba(10,11,18,.55) 74%,rgba(10,11,18,0) 92%)}}
